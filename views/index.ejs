@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+</head>
+<body>
+  Sistema ABC Iconos.
+
+<ul class="quotes">
+  <% for(var i=0; i<quotes.length; i++) {%>
+    <li class="pelicula">
+      <span><%= quotes[i].genero %></span>
+      <span><%= quotes[i].pelicula %></span>
+    </li>
+  <% } %>
+</ul>
+
+ <form action="/quotes" method="POST">
+    <input type="text" placeholder="Genero" name="genero">
+    <input type="text" placeholder="Pelicula" name="pelicula">
+    <button type="submit">Grabar</button>
+	</form>
+	
+	<div>
+  <h2>Cambiar</h2>
+  <button id="update"> Cambio </button>
+</div>
+
+<div>
+  <h2>Borrar</h2>
+  <button id="delete"> Borrar</button>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
